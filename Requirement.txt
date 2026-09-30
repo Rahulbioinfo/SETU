@@ -1,0 +1,39 @@
+# SETU
+
+## Scaffold-aware machine-learning and molecular simulation framework for computational prioritization of small molecules associated with the WhiB7–RNA polymerase interface
+
+SETU is a computational framework for prioritizing small molecules associated with the predefined WhiB7–RNA polymerase (RNAP) interface in *Mycobacterium tuberculosis*.
+
+The framework integrates molecular descriptor calculation, scaffold-aware machine learning, interface-associated prediction, and external chemical-set screening.
+
+> **Note:** SETU is intended for computational prioritization of candidates. Model predictions and observations should not be interpreted as experimental evidence of binding, molecular-glue activity, or antitubercular efficacy.
+
+---
+
+# Installation
+
+## 1. Create the SETU environment
+
+We recommend using **Conda** to create an isolated environment for SETU.
+
+First, install Miniconda or Anaconda if Conda is not already available.
+
+Then create the environment:
+
+```bash
+conda create -n setu python=3.10 -y
+conda activate setu
+
+pip install numpy==1.26.4 \
+            pandas==2.3.3 \
+            scikit-learn==1.7.2 \
+            xgboost==1.7.6 \
+            joblib==1.5.3 \
+            shap==0.49.1 \
+            mordred==1.2.0
+
+conda install -c conda-forge rdkit=2022.09.5 -y
+
+
+
+
